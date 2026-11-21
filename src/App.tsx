@@ -1,3 +1,5 @@
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import { useState } from "react";
 import { Enquiry } from "./components/Enquiry";
 import { Header } from "./components/Header";
@@ -239,6 +241,8 @@ export default function App() {
         <p className="px-4 pb-8 text-center text-sm">Prototype. This form does not book an appointment.</p>
       </footer>
       <Enquiry open={open} onClose={() => setOpen(false)} />
+      <Analytics />
+      <SpeedInsights />
     </div>
   );
 }
