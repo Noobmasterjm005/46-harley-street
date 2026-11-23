@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>46 Harley Street Implant Centre</title>
+  <meta name="description" content="Dental implants on Harley Street with Dr Anthony James. Book a free consultation at 46 Harley Street, London W1G 9PT.">
+  <link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/apple-touch.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #242d3c;
+      --gold: #c6aa62;
+      --paper: #f4f1ea;
+      --ink: #161616;
+      --muted: #3d4654;
+      --line: rgba(36, 45, 60, 0.16);
+      --header: 4.5rem;
+      --radius: 0.55rem;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Manrope, sans-serif;
+      font-size: 1.0625rem;
+      line-height: 1.65;
+    }
+    img, video { max-width: 100%; display: block; }
+    a { color: inherit; }
+    :focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+    .skip {
+      position: absolute; left: 1rem; top: -4rem;
+      background: var(--paper); color: var(--ink);
+      padding: 0.5rem 0.75rem; z-index: 10;
+    }
+    .skip:focus { top: 1rem; }
+    .wrap { width: min(1120px, calc(100% - 2.5rem)); margin-inline: auto; }
+    .prose { max-width: 65ch; }
+    h1, h2, h3, .quote p {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      line-height: 1.08;
+    }
+    h1 { font-size: clamp(2.6rem, 6vw, 4.75rem); margin: 0 0 1rem; }
+    h1::after {
+      content: "";
+      display: block;
+      width: 2.75rem;
+      height: 1px;
+      margin-top: 0.85rem;
+      background: var(--gold);
+    }
+    h2 { font-size: clamp(2rem, 3.4vw, 3rem); margin: 0 0 1.25rem; }
+    h3 { font-size: clamp(1.6rem, 2.4vw, 2.1rem); margin: 0 0 0.35rem; }
+    section { padding: 5rem 0; }
+    .kicker {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin: 0 0 0.85rem;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 2.75rem;
+      padding: 0.65rem 1.15rem;
+      border-radius: var(--radius);
+      background: var(--gold);
+      color: #14120c;
+      text-decoration: none;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .btn:hover { background: #d4bc78; }
+    header {
+      position: sticky; top: 0; z-index: 5;
+      background: var(--navy); color: var(--paper);
+      height: var(--header);
+    }
+    .bar {
+      height: 100%;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 1rem;
+    }
+    .logo img { height: 3.15rem; width: auto; }
+    .nav { display: flex; justify-content: center; gap: 1.35rem; }
+    .nav a { color: var(--paper); text-decoration: none; font-size: 0.92rem; }
+    .nav a:hover { color: var(--gold); }
+    .menu-toggle { display: none; border-radius: var(--radius); cursor: pointer; }
+    .hero {
+      min-height: calc(100vh - var(--header));
+      display: flex;
+      align-items: flex-end;
+      color: var(--paper);
+      background:
+        linear-gradient(90deg, rgba(20, 26, 36, 0.82) 0%, rgba(20, 26, 36, 0.45) 48%, rgba(20, 26, 36, 0.15) 100%),
+        url("assets/hero.png") center / cover no-repeat;
+      padding: 4rem 0 5rem;
+    }
+    .hero p { max-width: 36rem; font-size: 1.15rem; }
+    .band { background: var(--navy); color: var(--paper); }
+    .band p { max-width: 40rem; }
+    .fees h2 { margin-bottom: 0.5rem; }
+    .lead { max-width: 42rem; }
+    .price {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 0.35rem 1.5rem;
+      padding: 0.85rem 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .price strong { font-weight: 600; }
+    .price span { text-align: right; white-space: nowrap; }
+    .price p { grid-column: 1 / -1; margin: 0.2rem 0 0; color: var(--muted); font-size: 0.95rem; }
+    .group { margin-top: 2.5rem; }
+    .group h3 { margin-bottom: 0.75rem; }
+    .fine { color: var(--muted); font-size: 0.9rem; }
+    .film video {
+      width: 100%;
+      border-radius: var(--radius);
+      background: #111;
+    }
+    .note { color: var(--muted); font-size: 0.9rem; }
+    .facts {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem 2rem;
+      margin: 0 0 2rem;
+    }
+    .facts dt { font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600; }
+    .facts dd { margin: 0.35rem 0 0; }
+    .quotes { display: grid; gap: 2.5rem; max-width: 42rem; }
+    blockquote { margin: 0; }
+    .quote p { font-size: clamp(1.35rem, 2vw, 1.7rem); line-height: 1.25; margin: 0 0 0.75rem; }
+    blockquote footer { font-size: 0.92rem; }
+    .faq details { border-bottom: 1px solid var(--line); padding: 1rem 0; }
+    .faq summary { cursor: pointer; font-weight: 600; }
+    .faq details p { margin: 0.75rem 0 0.25rem; max-width: 40rem; }
+    .person { display: grid; grid-template-columns: minmax(220px, 320px) 1fr; gap: 2rem; align-items: start; margin: 3rem 0; }
+    .person img { width: 100%; border-radius: var(--radius); }
+    .role, .creds { margin: 0.25rem 0; }
+    .creds { color: var(--muted); font-size: 0.95rem; }
+    footer.site {
+      background: var(--navy);
+      color: var(--paper);
+      padding: 3.5rem 0 2.5rem;
+    }
+    .foot { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 2rem; }
+    footer.site a { color: var(--paper); text-decoration: none; }
+    footer.site a:hover { color: var(--gold); }
+    footer.site ul { list-style: none; margin: 0; padding: 0; }
+    footer.site li { margin: 0.35rem 0; }
+    .social { display: flex; gap: 0.6rem; margin-top: 1rem; }
+    .social a { display: block; line-height: 0; }
+    .social svg { width: 2.5rem; height: 2.5rem; border-radius: var(--radius); }
+    @media (max-width: 800px) {
+      .menu-toggle {
+        display: block;
+        justify-self: center;
+        background: transparent;
+        color: var(--paper);
+        border: 1px solid rgba(244, 241, 234, 0.4);
+        min-height: 2.5rem;
+        padding: 0 0.8rem;
+        font: inherit;
+        font-size: 0.8125rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+      .nav {
+        display: none;
+        position: absolute;
+        top: var(--header);
+        left: 0; right: 0;
+        background: var(--navy);
+        flex-direction: column;
+        padding: 0.5rem 1.25rem 1.25rem;
+      }
+      .nav.is-open { display: flex; }
+      .nav a { padding: 0.7rem 0; }
+      .facts, .person, .foot { grid-template-columns: 1fr; }
+      header .btn { padding-inline: 0.7rem; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header>
+    <div class="wrap bar">
+      <a class="logo" href="#top" aria-label="46 Harley Street Implant Centre, home">
+        <img src="assets/logo-mark.png" alt="46 Harley Street Implant Centre">
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+      <nav class="nav" id="nav" aria-label="Primary">
+        <a href="#top">Home</a>
+        <a href="#dr-james">About</a>
+        <a href="#implants">Implants</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="btn" href="#contact">Book a consultation</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="wrap">
+        <p class="kicker">46 Harley Street</p>
+        <h1>Dental implants on Harley Street.</h1>
+        <p>A consultation with Dr Anthony James, to see whether implants are the right next step for you.</p>
+        <a class="btn" href="#contact">Book a consultation</a>
+      </div>
+    </section>
+
+    <section class="band" id="implants">
+      <div class="wrap">
+        <h2>Your implant consultation</h2>
+        <p class="kicker">Join the list of 4000+ successful implants</p>
+        <p>Dr James is an expert in dental implants with a success rate of 99.7%. Dr James specialises in sedation dentistry which can help relax our more anxious patients prior to surgery.</p>
+        <a class="btn" href="#contact">Book a consultation</a>
+      </div>
+    </section>
+
+    <section class="fees" aria-labelledby="fees-title">
+      <div class="wrap">
+        <h2 id="fees-title">Dental implant cost in London</h2>
+        <div class="price">
+          <strong>Implant consultation</strong><span>Free</span>
+          <p>Considering dental implants? Book a free, no-obligation 30-minute consultation with Dr James at Harley Street Implant Centre. Discuss your smile goals, concerns and potential suitability for treatment.</p>
+        </div>
+        <div class="price">
+          <strong>Full clinical assessment</strong><span>£250</span>
+          <p>Our comprehensive dental implant assessment with Dr James includes a detailed clinical examination, advanced 3D CBCT imaging and digital or traditional impressions. We'll assess your suitability for dental implants and develop a personalised treatment plan, outlining your options, costs and treatment stages.</p>
+        </div>
+        <div class="price"><strong>CBCT scan</strong><span>From £150</span></div>
+        <div class="price"><strong>Implant placement</strong><span>From £1,200</span></div>
+        <div class="price"><strong>Implant crown</strong><span>From £1,200</span></div>
+        <div class="price"><strong>Single unit implant and crown</strong><span>From £2,400</span></div>
+        <div class="price"><strong>Multiple implants</strong><span>POA</span></div>
+        <div class="price"><strong>Guided bone regeneration</strong><span>From £400</span></div>
+        <div class="price"><strong>Onlay block graft</strong><span>From £1,500</span></div>
+        <div class="price"><strong>Internal sinus lift</strong><span>From £400</span></div>
+        <div class="price"><strong>Lateral sinus lift</strong><span>From £1,500</span></div>
+        <div class="price"><strong>All on 4 / 6 single arch</strong><span>From £13,500</span></div>
+        <div class="price"><strong>All on 4 / 6 dual arch</strong><span>From £25,000</span></div>
+        <div class="price"><strong>Teeth-in-a-day single arch</strong><span>From £15,000</span></div>
+        <div class="price"><strong>Teeth-in-a-day dual arch</strong><span>From £28,000</span></div>
+        <div class="price"><strong>IV sedation per hour</strong><span>From £350</span></div>
+        <div class="price"><strong>Routine extraction</strong><span>From £250</span></div>
+        <div class="price"><strong>Surgical extraction</strong><span>From £400</span></div>
+        <div class="price"><strong>Wisdom tooth extraction</strong><span>From £450</span></div>
+        <div class="price"><strong>Temporary denture</strong><span>From £500</span></div>
+        <div class="price"><strong>Temporary bridge</strong><span>From £500</span></div>
+
+        <div class="group">
+          <h3>Other services</h3>
+          <div class="price"><strong>General consultation</strong><span>£150</span></div>
+          <div class="price">
+            <strong>Emergency appointment</strong><span>£175</span>
+            <p>Includes X-rays but not treatment.</p>
+          </div>
+          <div class="price"><strong>Recementing crown / bridge</strong><span>£115</span></div>
+          <div class="price"><strong>Temporary filling</strong><span>£150</span></div>
+          <div class="price"><strong>Composite (white fillings)</strong><span>From £240</span></div>
+          <div class="price"><strong>Sectioning bridge</strong><span>£150</span></div>
+          <div class="price">
+            <strong>Diagnostic records</strong><span>£250</span>
+            <p>+ £40 per tooth. Includes wax up and articulated study casts.</p>
+          </div>
+          <div class="price"><strong>Restorability assessment</strong><span>£350/hr</span></div>
+          <div class="price"><strong>Fissure sealant</strong><span>From £95</span></div>
+          <div class="price">
+            <strong>Composite bonding</strong><span>£350</span>
+            <p>Per tooth.</p>
+          </div>
+          <div class="price"><strong>Composite core</strong><span>£200</span></div>
+          <div class="price"><strong>Post placement</strong><span>£400</span></div>
+          <div class="price"><strong>Ceramic crowns</strong><span>£1,000</span></div>
+          <div class="price"><strong>Veneers</strong><span>£1,200</span></div>
+          <div class="price">
+            <strong>Fixed conventional bridge</strong><span>£1,100</span>
+            <p>Per unit.</p>
+          </div>
+          <div class="price">
+            <strong>Fixed resin bonded bridge work</strong><span>£1,100</span>
+            <p>Per unit.</p>
+          </div>
+          <div class="price"><strong>Partial acrylic denture (single)</strong><span>£950</span></div>
+          <div class="price"><strong>Partial chrome denture (single)</strong><span>£2,500</span></div>
+          <div class="price"><strong>Full denture (single)</strong><span>£2,800</span></div>
+          <div class="price"><strong>Michigan splint</strong><span>£900</span></div>
+          <div class="price"><strong>Essix retainer (single)</strong><span>£220</span></div>
+          <div class="price"><strong>Zoom tooth whitening</strong><span>£550</span></div>
+        </div>
+        <p class="fine">These are guide fees. The written plan after your assessment is the figure you rely on.</p>
+      </div>
+    </section>
+
+    <section class="film" aria-labelledby="film-title">
+      <div class="wrap">
+        <h2 id="film-title">In the clinic</h2>
+        <video controls playsinline preload="metadata" poster="assets/surgery.png">
+          <source src="assets/promo.mp4" type="video/mp4">
+        </video>
+        <p class="note">Press play to watch. Sound stays off until you start the film.</p>
+      </div>
+    </section>
+
+    <section class="visit" id="contact">
+      <div class="wrap">
+        <h2>Visit</h2>
+        <dl class="facts">
+          <div>
+            <dt>Location</dt>
+            <dd><a href="https://maps.google.com/?q=46+Harley+Street,+London+W1G+9PT">46 Harley Street, London W1G 9PT, UK</a></dd>
+          </div>
+          <div>
+            <dt>Hours</dt>
+            <dd>Mon–Fri 9am–6pm<br>Sat 10am–6pm<br>Sun closed</dd>
+          </div>
+          <div>
+            <dt>Phone</dt>
+            <dd><a href="tel:+442045535441">020 4553 5441</a></dd>
+          </div>
+          <div>
+            <dt>Email</dt>
+            <dd><a href="mailto:info@harleystreetimplantcentre.co.uk">info@harleystreetimplantcentre.co.uk</a></dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="proof" aria-labelledby="proof-title">
+      <div class="wrap">
+        <h2 id="proof-title">Patients</h2>
+        <div class="quotes">
+          <blockquote class="quote">
+            <p>Dr. Anthony James is exceptional. Having previously had negative experiences with other oral surgeons, I discovered The Harley Street Implant Centre. Within moments of meeting Dr. Anthony James I knew I had found my surgeon. His bedside manner is second to none and I felt extremely safe at all times. The surgery was smooth and stress free. This really is a wonderful place. I could go on about how fantastic this clinic is, but suffice to say, look no further for a clinic, you have found it. Thank you again Dr. Anthony James for all your time and amazing work. I am forever grateful. Damo CEO Damo's Personal Training</p>
+            <footer><a href="https://maps.app.goo.gl/di25tgNYD3w14DDr7">Damo's Personal Training, on Google</a></footer>
+          </blockquote>
+          <blockquote class="quote">
+            <p>My experience with Dr.Anthony was absolutely amazing. Having walked out of a previous extraction appointment due to a crazy infection and the added terror of messing with the infected area. Dr. Anthony went above and beyond to accommodate my desire/demand for sedation. I can't recommend him, his team and his practice enough! I was flying the next day and woke up pain free!</p>
+            <footer><a href="https://maps.app.goo.gl/GNNQi5CiFpQweaGe8">Jade Southwell, on Google</a></footer>
+          </blockquote>
+          <blockquote class="quote">
+            <p>My implant treatment commenced in Nov 2024 and involved complicated procedures including sinus grafts and removal of teeth and gum infection, all in all the treatment has taken until today to be completed so 10 months in total. I would recommend Harley Street implant centre to you as the service I have received has been exceptional. Anthony is extremely professional and knowledgeable and has a wonderful calm and kind manner which is crucial particularly as you want to have total trust in who you chooose to provide your implants, I am so pleased with my implants …. thank you Anthony 🤩</p>
+            <footer><a href="https://maps.app.goo.gl/V9uPaw1CprN7C29a7">claudine smith, on Google</a></footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq" id="faq">
+      <div class="wrap">
+        <h2>FAQ</h2>
+        <details>
+          <summary>Am I a candidate?</summary>
+          <p>That is what the consultation is for. Dr James looks at your teeth, your health, and what you want before anyone talks about treatment.</p>
+        </details>
+        <details>
+          <summary>How long is the appointment?</summary>
+          <p>The implant consultation is 30 minutes and free. The full clinical assessment is a separate visit.</p>
+        </details>
+        <details>
+          <summary>How long does treatment take?</summary>
+          <p>It depends on your case. You leave the consultation with a time frame for the whole implant plan, which is separate from the length of one visit.</p>
+        </details>
+        <details>
+          <summary>What happens at the consultation?</summary>
+          <p>You meet Dr James, talk through your smile goals and concerns, and hear whether implants may be suitable. The scan and written plan are part of the full clinical assessment, not the free visit.</p>
+        </details>
+        <details>
+          <summary>How do I get to 46 Harley Street?</summary>
+          <p>46 Harley Street, London W1G 9PT. The address under Visit opens a map.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="about" id="about" aria-labelledby="expertise-title">
+      <div class="wrap">
+        <h2 id="expertise-title">Our expertise</h2>
+        <div class="prose">
+          <p>Few dentists are qualified in sedation dentistry... even fewer in polypharmacy sedation.</p>
+          <p>Dr James is a highly qualified sedation dentist in London. Although, his skills go beyond your standard sedation dentistry. His postgraduate diploma in sedation dentistry means he is qualified in polypharmacy sedation dentistry. This means he can deliver several different IV medications safely. Dr James’ expertise in the area has resulted in his accreditation by RCS England to teach and train others in sedation services.</p>
+        </div>
+
+        <article class="person" id="dr-james">
+          <a href="#dr-james"><img src="assets/portrait.jpg" alt="Dr Anthony James seated in the consulting room at 46 Harley Street"></a>
+          <div>
+            <h3>Dr Anthony James</h3>
+            <p class="role">Specialty Doctor and Lead Dentist at The Harley Street Dental Implant Centre.</p>
+            <p class="creds">BDS (Lond) MFDS RCS (Eng) MJDF DipImpDent (Manc) DipDSed (KCL) AKC PGCertClinEd (KCL) FHEA MAcadMEd</p>
+            <p>Dr. James qualified in 2011 from King’s College London. Subsequently, he worked as a Junior Doctor in Oral &amp; Maxillofacial Surgery, progressing to the role of Specialty Doctor in the field. During this time he held the position of Clinical Lecturer in Oral Surgery at The University of Bristol.</p>
+            <p>He has since completed a postgraduate diploma in Dental Implantology and provides a comprehensive scope of Implantology practice, having now placed over 4000 successful implants. His deep experience of dental implants has led to his accredited role as a Mentor in Dental Implants by the College of General Dentistry.</p>
+            <p>Accordingly, Dr. James’ experience has led to him being selected to be an Examiner for The Faculty of Dental Surgery at The Royal College of Surgeons of England.</p>
+          </div>
+        </article>
+
+        <h2>Our team</h2>
+
+        <article class="person" id="dr-maria">
+          <a href="#dr-maria"><img src="assets/maria.jpg" alt="Dr Maria Sobierajska, Specialist Prosthodontist"></a>
+          <div>
+            <h3>Dr Maria Sobierajska</h3>
+            <p class="role">Specialist Prosthodontist</p>
+            <p class="creds">BDS (Distinction) (Lond), AKC, Pg cert, MJDF RCS Eng, M Prost RCSEd, MClinDent Prosthodontics (Distinction) (Lond)</p>
+            <p>Maria Sobierajska is a specialist dentist with a strong academic and professional background. She graduated with honors from King’s College London in 2015, where she earned her bachelor’s degree in dentistry and became an associate of the college.</p>
+            <p>Following her graduation, Maria spent a year working in the oral and maxillofacial department, where she gained valuable experience in complex extractions, facial trauma, and dental emergencies. Since then, she has worked in various dental practices across London and East Sussex, continually expanding her expertise. She has also pursued several advanced qualifications, including the MJDF from the Royal College of Surgeons of England, a course in Aesthetic Restorative Procedures from the Eastman Dental Institute, a Primary Dental Care Certification from the University of Kent and a National Course in Conscious Sedation from the Society for the Advancement of Anaesthesia in Dentistry.</p>
+            <p>Maria developed a keen interest in rehabilitating patients with complex dental conditions such as severe tooth wear, hypodontia, and tooth loss. This passion led her to pursue specialist training in prosthodontics at King’s College London, which she completed with honors in September 2023. She also successfully passed her prosthodontic specialty exams with the Royal College of Surgeons in Edinburgh.</p>
+            <p>Known for her commitment to delivering high-quality, evidence-based, and ethical care, Maria is deeply appreciated by her patients for her compassionate nature and positive demeanor.</p>
+            <p>Languages spoken: English (fluent), Polish (fluent) and French (basic).</p>
+          </div>
+        </article>
+
+        <article class="person" id="dr-sherif">
+          <a href="#dr-sherif"><img src="assets/sherif.jpg" alt="Dr Sherif Abbas Ali, Restorative Dentist"></a>
+          <div>
+            <h3>Dr Sherif Abbas Ali</h3>
+            <p class="role">Restorative Dentist</p>
+            <p class="creds">BEng (Hons) DDS MFDS RCPS (Glasgow) PgCert Expert Witness PgDip Clear Aligner Therapy MSc Oral Surg MSc Rest Dent (London) APIL MEWA</p>
+            <p>Dr Sherif Ali has accumulated a wealth of experience during his career. He works at multiple aesthetic and implant clinics in Yorkshire, London and Manchester.</p>
+            <p>Not only has Sherif been trained by the UK’s and some of the world’s leading aesthetic dental and oral surgery experts, but he has also obtained a master’s degree in Restorative Dentistry from the prestigious Eastman Dental Institute in London where he is able to deliver excellent restorative solutions.</p>
+            <p>Having obtained a Diploma in Clear Aligner therapy, he has managed to combine the use of Invisalign clear aligners with composite bonding and minimally invasive veneers to produce the most aesthetic result in the least invasive manner. He has acquired many skills on his dental journey where emphasis lies on tooth preservation and replicating nature to produce good function and aesthetics.</p>
+            <p>He also holds a second master’s degree in Oral surgery and has intravenous sedation training where extra relaxation means are available for the anxious patients, moreover, he is an approved mentor by The Society for the Advancement of Anaesthesia in Dentistry.</p>
+            <p>Sherif is currently undertaking a diploma in periodontics and is currently placing dental implants. He is also a dental expert witness where he deals with medico-legal reports, assessments, and advice.</p>
+            <p>Sherif regards himself as a perfectionist and prides himself in being professional, kind, empathetic and caring. Every patient is different and not every plan is the same as his approach is to provide bespoke tailored dentistry to suit the patient’s needs and circumstance.</p>
+            <p>Sherif is fluent in Arabic and is a regular gym goer and an amateur boxer.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site">
+    <div class="wrap foot">
+      <a class="logo" href="#top" aria-label="46 Harley Street Implant Centre">
+        <img src="assets/logo-mark.png" alt="">
+      </a>
+      <ul>
+        <li><a href="#top">Home</a></li>
+        <li><a href="#dr-james">About</a></li>
+        <li><a href="#implants">Implants</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div>
+        <p>46 Harley Street, London W1G 9PT, UK</p>
+        <p>Mon–Fri 9am–6pm<br>Sat 10am–6pm<br>Sun closed</p>
+        <p><a href="tel:+442045535441">020 4553 5441</a><br>
+          <a href="mailto:info@harleystreetimplantcentre.co.uk">info@harleystreetimplantcentre.co.uk</a></p>
+        <div class="social">
+          <a href="https://www.facebook.com/harleystreetimplantcentre" aria-label="Facebook">
+            <svg viewBox="0 0 48 48" role="img"><rect width="48" height="48" rx="8" fill="#1877F2"/><path fill="#fff" d="M27.5 38V25.2h4.3l.6-5h-4.9v-3.2c0-1.4.4-2.4 2.5-2.4H33V10.1C32.4 10 30.9 9.8 29.2 9.8c-3.8 0-6.4 2.3-6.4 6.6v3.8H18.5v5H22.8V38h4.7z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/harleystreetimplants/" aria-label="Instagram">
+            <svg viewBox="0 0 48 48" role="img"><rect width="48" height="48" rx="8" fill="#111"/><rect x="14" y="14" width="20" height="20" rx="6" fill="none" stroke="#fff" stroke-width="2"/><circle cx="24" cy="24" r="5" fill="none" stroke="#fff" stroke-width="2"/><circle cx="31.2" cy="16.8" r="1.3" fill="#fff"/></svg>
+          </a>
+          <a href="https://www.youtube.com/@HarleyStreetImplantCentre" aria-label="YouTube">
+            <svg viewBox="0 0 48 48" role="img"><rect width="48" height="48" rx="8" fill="#FF0000"/><path fill="#fff" d="M20 18.5v11l10-5.5-10-5.5z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+    const toggle = document.querySelector(".menu-toggle");
+    const nav = document.querySelector("#nav");
+    toggle.addEventListener("click", () => {
+      const open = nav.classList.toggle("is-open");
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+      toggle.textContent = open ? "Close" : "Menu";
+    });
+    nav.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        nav.classList.remove("is-open");
+        toggle.setAttribute("aria-expanded", "false");
+        toggle.textContent = "Menu";
+      });
+    });
+  </script>
+</body>
+</html>
