@@ -308,9 +308,11 @@ summary:focus-visible {
 }
 
 .why-grid article {
-  background: var(--cream-2);
+  background: #fff;
   padding: 0;
   overflow: hidden;
+  border-radius: var(--radius);
+  border-top: 3px solid var(--gold);
 }
 
 .why-grid img {
@@ -325,8 +327,9 @@ summary:focus-visible {
 
 .why-grid h3 {
   font-family: var(--serif);
-  font-size: 1.7rem;
+  font-size: 1.55rem;
   font-weight: 500;
+  line-height: 1.15;
   margin: 0 0 0.5rem;
 }
 
@@ -410,8 +413,8 @@ summary:focus-visible {
 }
 
 .contact {
-  background: var(--navy);
-  color: #f6f1e8;
+  background: transparent;
+  color: var(--ink);
 }
 
 .contact-grid {
@@ -421,12 +424,23 @@ summary:focus-visible {
   align-items: start;
 }
 
+.contact h1,
 .contact h2 {
-  color: #f6f1e8;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  line-height: 1.05;
+  margin: 0;
 }
 
 .contact a {
-  color: var(--gold);
+  color: var(--navy);
+}
+
+.contact .contact-list svg,
+.contact .socials svg {
+  stroke: var(--gold-deep);
 }
 
 .contact-list {
@@ -546,7 +560,7 @@ summary:focus-visible {
 .clinicians h2 {
   font-family: var(--serif);
   font-weight: 500;
-  font-size: 1.7rem;
+  font-size: 1.55rem;
   line-height: 1.15;
   margin: 0.85rem 0 0.2rem;
 }
@@ -592,7 +606,7 @@ summary:focus-visible {
   grid-template-columns: minmax(0, 1.05fr) minmax(16rem, 0.95fr);
   gap: 2rem 2.5rem;
   align-items: center;
-  padding: 1.35rem 8vw 1.5rem;
+  padding: 3.5rem 8vw 2rem;
 }
 
 .treat-back {
@@ -634,6 +648,7 @@ summary:focus-visible {
 .treat-glance div {
   background: #fff;
   border-top: 3px solid var(--gold);
+  border-radius: var(--radius);
   padding: 0.9rem 1rem 1rem;
 }
 
@@ -649,7 +664,8 @@ summary:focus-visible {
 .treat-glance strong {
   font-family: var(--serif);
   font-weight: 500;
-  font-size: 1.45rem;
+  font-size: 1.55rem;
+  line-height: 1.15;
 }
 
 .treat-cols {
@@ -663,6 +679,7 @@ summary:focus-visible {
   font-family: var(--serif);
   font-weight: 500;
   font-size: 1.8rem;
+  line-height: 1.15;
   margin: 0;
 }
 
@@ -683,7 +700,9 @@ summary:focus-visible {
 }
 
 .glance div {
-  background: var(--cream-2);
+  background: #fff;
+  border-top: 3px solid var(--gold);
+  border-radius: var(--radius);
   padding: 1.2rem 1.15rem;
 }
 
@@ -699,7 +718,7 @@ summary:focus-visible {
 }
 
 .course-page .section {
-  padding: 2rem 8vw;
+  padding: 3.5rem 8vw;
 }
 
 .course-page .treat-hero video {
@@ -745,7 +764,8 @@ summary:focus-visible {
   margin: 0.2rem 0 0.2rem;
   font-family: var(--serif);
   font-weight: 500;
-  font-size: 2rem;
+  font-size: 1.8rem;
+  line-height: 1.15;
 }
 
 .role {
@@ -766,8 +786,54 @@ summary:focus-visible {
 }
 
 .syllabus li {
+  background: #fff;
   border-top: 3px solid var(--gold);
-  padding-top: 0.45rem;
+  border-radius: var(--radius);
+  padding: 0.7rem 0.85rem 0.8rem;
+  font-weight: 600;
+}
+
+.reviews {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin: 1.5rem 0 0;
+}
+
+.reviews blockquote {
+  margin: 0;
+}
+
+.reviews img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center 18%;
+  border-radius: var(--radius);
+  background: var(--cream-2);
+}
+
+.review-name {
+  margin: 0.7rem 0 0.15rem;
+  font-family: var(--serif);
+  font-size: 1.55rem;
+  font-weight: 500;
+  line-height: 1.15;
+}
+
+.review-quote {
+  margin: 0;
+  color: var(--muted);
+}
+
+.stars {
+  margin: 0.45rem 0 0.15rem;
+  color: var(--gold-deep);
+  letter-spacing: 0.12em;
+}
+
+.reviews a {
+  color: var(--navy);
   font-weight: 600;
 }
 
@@ -799,8 +865,9 @@ summary:focus-visible {
 .gallery figcaption strong {
   display: block;
   font-family: var(--serif);
-  font-size: 1.25rem;
+  font-size: 1.55rem;
   font-weight: 500;
+  line-height: 1.15;
   color: var(--ink);
 }
 
@@ -859,7 +926,7 @@ summary:focus-visible {
 }
 
 .contact-actions .quiet {
-  color: var(--gold);
+  color: var(--navy);
   font-weight: 600;
 }
 
@@ -926,8 +993,8 @@ summary:focus-visible {
 .treat-card {
   background: #fff;
   border-radius: var(--radius);
+  border-top: 3px solid var(--gold);
   overflow: hidden;
-  box-shadow: 0 1px 0 rgba(12, 26, 51, 0.06);
 }
 
 .treat-card img {
@@ -944,7 +1011,7 @@ summary:focus-visible {
   margin: 0 0 0.4rem;
   font-family: var(--serif);
   font-weight: 500;
-  font-size: 1.45rem;
+  font-size: 1.55rem;
   line-height: 1.15;
 }
 
@@ -994,7 +1061,8 @@ summary:focus-visible {
   margin: 0 0 0.4rem;
   font-family: var(--serif);
   font-weight: 500;
-  font-size: 1.6rem;
+  font-size: 1.55rem;
+  line-height: 1.15;
 }
 
 .fees ul {
